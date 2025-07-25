@@ -1,0 +1,44 @@
+{
+  "streams": [
+    {
+      "rtsp_id": "1",
+      "name": "CAMERA1",
+      "rtsp_url": "fall_video.mp4",
+      "username": "admin",
+      "password": "admin123",
+      "fps": 2,
+      "entry_line_type": "vertical",
+      "exit_line_type": "vertical",
+      "loitering_threshold": 5,
+      "crowd_formation_threshold": 1,
+      "crowd_formation_duration": 1,
+      "crowd_estimation_threshold": 1,
+      "crowd_estimation_duration": 2,
+      "crowd_dispersion_threshold": 1,
+      "crowd_dispersion_duration": 2,
+      "direction": "Left to Right",
+      "analytics": [
+        {
+          "type": "Intrusion",
+          "roi": [
+            [0, 0],
+            [0, 621],
+            [621, 621],
+            [621, 0]
+          ]
+        },
+        {
+          "type": "person_in_out_count",
+          "entry_line": [
+            [292, 58],
+            [277, 552]
+          ],
+          "exit_line": [
+            [436, 47],
+            [419, 549]
+          ]
+        }
+      ]
+    }
+  ]
+}

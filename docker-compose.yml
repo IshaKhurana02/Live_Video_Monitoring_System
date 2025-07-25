@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: mongo_container
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo_data:/data/db
+
+  video_analyzer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gstreamer_container
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    environment:
+      - TZ=Asia/Kolkata
+      - MONGO_URI=mongodb://root:example@mongodb:27017/
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "5555:5555"
+
+    volumes:
+      - ./my_app/stream.json:/app/config/stream.json
+      - ./my_app/config.json:/app/config/config.json
+      - ./my_app/class_name.json:/app/config/class_name.json
+      - ./my_app/main.py:/app/main.py
+      - ./my_app/helpers.py:/app/helpers.py
+      - ./my_app/sort.py:/app/sort.py
+      - ./my_app/tracker.py:/app/tracker.py
+      - ./my_app/LOGS:/app/LOGS
+      - ./my_app/Intrusion:/app/Intrusion
+      - ./my_app/Intrusion_with_attribute:/app/Intrusion_with_attribute
+      - ./my_app/Directional_alarm:/app/Directional_alarm
+      - ./my_app/Loitering:/app/Loitering
+      - ./my_app/Fall:/app/Fall
+      - ./my_app/Fire_and_smoke:/app/Fire_and_smoke
+      - ./my_app/Wrong_direction:/app/Wrong_direction
+      - ./my_app/waving_hands:/app/waving_hands
+      - ./my_app/crowd_formation:/app/crowd_formation
+      - ./my_app/crowd_estimation:/app/crowd_estimation
+      - ./my_app/crowd_dispersion:/app/crowd_dispersion
+      - ./my_app/waiting_time:/app/waiting_time
+      - ./my_app/Person_in_out:/app/Person_in_out
+
+    runtime: nvidia
+    command: python3 /app/main.py
+
+volumes:
+  mongo_data:

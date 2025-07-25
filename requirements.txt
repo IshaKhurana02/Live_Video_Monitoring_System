@@ -1,0 +1,12 @@
+ultralytics
+torch==2.2.2+cu121
+torchvision==0.17.2+cu121
+opencv-python-headless
+numpy<2.0
+pymongo
+pyzmq
+filterpy
+scikit-image
+lap
+Pillow
+h5py
