@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.log
+my_app/CSRNET_PartAmodel_best.pth
+my_app/CSRNET_partBmodel_best.pth

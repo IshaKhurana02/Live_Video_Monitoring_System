@@ -77,8 +77,8 @@ fall.to(device)
 fireNsmoke=YOLO("fireandsmoke.pt")
 fireNsmoke.to(device)
 pose_model=YOLO("pose.pt")
-csrnet_model_path = "CSRNET_PartAmodel_best.pth"
-csrnet_model = helpers.load_csrnet_model(csrnet_model_path,device)
+# csrnet_model_path = "CSRNET_PartAmodel_best.pth"
+# csrnet_model = helpers.load_csrnet_model(csrnet_model_path,device)
 person_attributes_model_path = "Person_attributes_resnet50_peta.pth"
 person_attributes_model = helpers.load_person_attributes_resnet_model(person_attributes_model_path,device)
 

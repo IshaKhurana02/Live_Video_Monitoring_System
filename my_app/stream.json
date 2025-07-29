@@ -19,7 +19,7 @@
       "direction": "Left to Right",
       "analytics": [
         {
-          "type": "Intrusion",
+          "type": "wrong_direction",
           "roi": [
             [0, 0],
             [0, 621],
@@ -28,14 +28,12 @@
           ]
         },
         {
-          "type": "person_in_out_count",
-          "entry_line": [
-            [292, 58],
-            [277, 552]
-          ],
-          "exit_line": [
-            [436, 47],
-            [419, 549]
+          "type": "person_waving_hand",
+          "roi": [
+            [0, 0],
+            [0, 621],
+            [621, 621],
+            [621, 0]
           ]
         }
       ]
