@@ -53,7 +53,7 @@ All detection events are logged and stored in MongoDB with structured metadata f
 - 🎯 **Type of event** (e.g., Intrusion, Fire, Fall)  
 - 📷 **Camera ID** or stream source  
 - 📍 **Bounding box coordinates** (if applicable)  
-- 📡 **Location metadata** (optional, if GPS or zone mapping is enabled)
+
 
 These records can be:
 - Queried for post-event analysis  
@@ -122,11 +122,6 @@ We welcome contributions from the community! Here's how you can help:
 🔗 [linkedin.com/in/isha-khurana](https://linkedin.com/in/isha-khurana)  
 💻 [github.com/yourusername](https://github.com/yourusername)
 
----
 
-## 📄 License
-
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for full legal terms.
 
 ---
