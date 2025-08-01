@@ -1,22 +1,13 @@
-                                                               🔍 Intelligent Live Video Monitoring System
+🔍 Intelligent Live Video Monitoring System
 A real-time, scalable, and intelligent CCTV surveillance solution designed to monitor multiple live video streams and detect critical events such as:
-
 🚷 Intrusion detection
-
 🌀 Loitering behavior
-
 👥 Crowd formation & dispersion
-
 🔥 Fire and smoke detection
-
 🤕 Fall detection
-
 🚶‍♂️ Person in/out tracking
-
 🔀 Wrong direction movement
-
 📣 Directional alarms
-
 Built for high-performance edge deployment and real-time alerting, this system is engineered to support security, public safety, and automation use cases.
 
 🚀 Features
