@@ -45,6 +45,31 @@ Built for high-performance edge deployment and real-time alerting, this system i
 
 <img width="706" height="344" alt="image" src="https://github.com/user-attachments/assets/9f2f4be3-dfa2-4a51-bba1-23b7ab54f0a7" />
 
+⚙️ Getting Started
+Follow these steps to get the system up and running in your local or edge environment.
+
+🔁 1. Clone the Repository
+
+git clone https://github.com/yourusername/intelligent-video-monitoring.git  
+cd intelligent-video-monitoring  
+
+🐳 2. Build the Docker Image
+
+docker build -t intelligent-monitoring .
+
+🚀 3. Run the Container
+
+docker run -it --rm -p 5000:5000 intelligent-monitoring  
+
+🛢 4. Configure MongoDB
+Ensure MongoDB is installed and running on your machine or hosted remotely.
+
+Update your connection string in the .env or config.json:
+
+MONGODB_URI=mongodb://localhost:27017  
+MONGO_DB_NAME=video_monitoring  
+💡 Tip: You can use services like MongoDB Atlas for cloud deployment.
+
 ## 📊 Real-Time Alerts
 
 All detection events are logged and stored in MongoDB with structured metadata for analysis and visualization. Each alert contains:
