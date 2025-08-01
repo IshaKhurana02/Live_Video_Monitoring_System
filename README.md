@@ -43,20 +43,7 @@ Built for high-performance edge deployment and real-time alerting, this system i
 
 ## 🛠 Architecture
 
-
-+------------------+       +------------------------+       +--------------------+
-|  CCTV Camera(s)  +-----> | GStreamer + ZMQ Stream | ----> | Detection Engine   |
-+------------------+       +------------------------+       | (DL Models)        |
-                                                             +---------+----------+
-                                                                       |
-                                                               +-------v--------+
-                                                               | Alert Handler  |
-                                                               +-------+--------+
-                                                                       |
-                                                               +-------v--------+
-                                                               |  MongoDB       |
-                                                               +----------------+
-
+<img width="706" height="344" alt="image" src="https://github.com/user-attachments/assets/9f2f4be3-dfa2-4a51-bba1-23b7ab54f0a7" />
 
 ## 📊 Real-Time Alerts
 
