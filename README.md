@@ -43,7 +43,7 @@ Built for high-performance edge deployment and real-time alerting, this system i
 
 ## 🛠 Architecture
 
-```plaintext
+
 +------------------+       +------------------------+       +--------------------+
 |  CCTV Camera(s)  +-----> | GStreamer + ZMQ Stream | ----> | Detection Engine   |
 +------------------+       +------------------------+       | (DL Models)        |
@@ -56,6 +56,8 @@ Built for high-performance edge deployment and real-time alerting, this system i
                                                                +-------v--------+
                                                                |  MongoDB       |
                                                                +----------------+
+
+
 ## 📊 Real-Time Alerts
 
 All detection events are logged and stored in MongoDB with structured metadata for analysis and visualization. Each alert contains:
